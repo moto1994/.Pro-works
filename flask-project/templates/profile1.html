@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>プロフィール</h3>
+{% for user in user %}
+<p>
+名前: {{ user.name }}
+年齢: {{ user.age }}
+性別: {{ user.sex }}
+<h4>{{user}}</h4>
+<a href="edit/{{user.id}}">プロフィールを編集する</a>
+<a href="delete/{{user.id}}">プロフィールを削除する</a>
+
+</p>
+{% endfor %}
+<a href="add">プロフィールを追加</a>
+{% endblock %}

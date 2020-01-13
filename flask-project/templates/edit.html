@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="update" method="post">
+<select name="user_name">
+{% for i in user.keys() %}
+<option value={{i}}>{{i}}</option>
+{% endfor %}
+</select><br>
+
+<h3>{{user}}</h3>
+<form action="update" method="POST">
+  名前：<input type="text" name="name" value="">
+  年齢：<input type="text" name="age" value="">
+  性別：<input type="text" name="sex" value="">
+  <input type="submit" name="" value="更新">
+</form>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>素数判定</h3>
+数字 : {{number}}
+
+{{n}} = user.number
+{% for p in range(2, n) %}
+	{% if n % p == 0 %}
+        	<h4>{{str(n)}} + 'is composite!'<h4>
+		return
+	{% endif %}
+{% endfor %}
+<h5>{{str(n)}} +  'is PRIME'</h5>
+
+{% endblock %}
